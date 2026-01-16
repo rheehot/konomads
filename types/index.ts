@@ -5,6 +5,7 @@ export interface City {
   slug: string;
   region: string;
   thumbnail: string;
+  emoji?: string;
   description: string;
   badge?: "popular" | "rising" | "new";
 

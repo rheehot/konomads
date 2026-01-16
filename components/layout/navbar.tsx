@@ -39,7 +39,7 @@ export function Navbar() {
             <Link href="/login">로그인</Link>
           </Button>
           <Button asChild>
-            <Link href="/signup">회원가입</Link>
+            <Link href="/register">회원가입</Link>
           </Button>
         </div>
 
@@ -81,7 +81,7 @@ export function Navbar() {
                 <Link href="/login">로그인</Link>
               </Button>
               <Button asChild className="w-full">
-                <Link href="/signup">회원가입</Link>
+                <Link href="/register">회원가입</Link>
               </Button>
             </div>
           </div>

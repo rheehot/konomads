@@ -68,7 +68,7 @@ export function PricingSection() {
                   <Link
                     href={
                       plan.tier === "free"
-                        ? "/signup"
+                        ? "/register"
                         : plan.tier === "premium"
                         ? "/pricing"
                         : "/contact"
