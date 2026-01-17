@@ -14,19 +14,21 @@ import { logout } from "@/app/auth/logout/actions";
 
 interface UserMenuProps {
   user: {
-    email: string;
+    email?: string;
     id?: string;
   };
 }
 
 export function UserMenu({ user }: UserMenuProps) {
+  const emailInitial = user.email ? user.email[0].toUpperCase() : 'U'
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-9 w-9 rounded-full">
           <Avatar className="h-9 w-9">
-            <AvatarImage src="/avatars/01.png" alt={user.email} />
-            <AvatarFallback>{user.email[0].toUpperCase()}</AvatarFallback>
+            <AvatarImage src="/avatars/01.png" alt={user.email || 'User'} />
+            <AvatarFallback>{emailInitial}</AvatarFallback>
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
@@ -35,7 +37,7 @@ export function UserMenu({ user }: UserMenuProps) {
           <div className="flex flex-col space-y-1">
             <p className="text-sm font-medium leading-none">사용자</p>
             <p className="text-xs leading-none text-muted-foreground">
-              {user.email}
+              {user.email || 'user@example.com'}
             </p>
           </div>
         </DropdownMenuLabel>
