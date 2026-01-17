@@ -1,13 +1,13 @@
-"use client";
-
 import Link from "next/link";
 import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NAV_MENU } from "@/lib/constants";
-import { useState } from "react";
+import { createClient } from "@/lib/supabase/server";
+import { UserMenu } from "./user-menu";
 
-export function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+export async function Navbar() {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -35,12 +35,18 @@ export function Navbar() {
           <Button variant="ghost" size="icon">
             <Search className="h-5 w-5" />
           </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/login">로그인</Link>
-          </Button>
-          <Button asChild>
-            <Link href="/register">회원가입</Link>
-          </Button>
+          {user ? (
+            <UserMenu user={user} />
+          ) : (
+            <>
+              <Button variant="ghost" asChild>
+                <Link href="/login">로그인</Link>
+              </Button>
+              <Button asChild>
+                <Link href="/register">회원가입</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -48,45 +54,19 @@ export function Navbar() {
           <Button variant="ghost" size="icon">
             <Search className="h-5 w-5" />
           </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </Button>
+          <MobileMenu user={user} />
         </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <div className="container py-4 space-y-4">
-            {NAV_MENU.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4 space-y-2">
-              <Button variant="ghost" asChild className="w-full justify-start">
-                <Link href="/login">로그인</Link>
-              </Button>
-              <Button asChild className="w-full">
-                <Link href="/register">회원가입</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </nav>
+  );
+}
+
+function MobileMenu({ user }: { user: any }) {
+  return (
+    <>
+      <Button variant="ghost" size="icon">
+        <Menu className="h-5 w-5" />
+      </Button>
+    </>
   );
 }

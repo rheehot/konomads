@@ -1,5 +1,6 @@
 import { CityCard } from "./city-card";
 import { CITIES } from "@/lib/constants";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function CityGrid() {
@@ -53,6 +54,3 @@ export function CityGrid() {
     </section>
   );
 }
-
-// Add Button import
-import { Button } from "@/components/ui/button";

@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import { REVIEWS } from "@/lib/constants";
 import Link from "next/link";
 
@@ -80,6 +81,3 @@ export function ReviewSection() {
     </section>
   );
 }
-
-// Add Button import
-import { Button } from "@/components/ui/button";

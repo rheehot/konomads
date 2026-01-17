@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { QUICK_FILTERS } from "@/lib/constants";
 
@@ -40,6 +41,3 @@ export function QuickFilters() {
     </section>
   );
 }
-
-// Add useState import
-import { useState } from "react";
