@@ -33,14 +33,16 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser()
 
+  const pathname = request.nextUrl.pathname
+
   if (
     !user &&
-    !request.nextUrl.pathname.startsWith('/login') &&
-    !request.nextUrl.pathname.startsWith('/register') &&
-    !request.nextUrl.pathname.startsWith('/forgot-password') &&
-    !request.nextUrl.pathname.startsWith('/reset-password') &&
-    !request.nextUrl.pathname.startsWith('/cities') &&
-    !request.nextUrl.pathname === '/'
+    !pathname.startsWith('/login') &&
+    !pathname.startsWith('/register') &&
+    !pathname.startsWith('/forgot-password') &&
+    !pathname.startsWith('/reset-password') &&
+    !pathname.startsWith('/cities') &&
+    pathname !== '/'
   ) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'

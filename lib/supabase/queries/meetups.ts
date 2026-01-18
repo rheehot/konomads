@@ -203,13 +203,13 @@ export async function joinMeetup(meetupId: string, userId: string, status: strin
   const supabase = await createClient()
   const { error } = await supabase
     .from('meetup_participants')
-    .insert({
+    .upsert({
       meetup_id: meetupId,
       user_id: userId,
       status
-    } as MeetupParticipantsInsert)
-    .onConflict('meetup_id, user_id')
-    .merge({ status })
+    }, {
+      onConflict: 'meetup_id,user_id'
+    })
 
   if (error) throw error
 }

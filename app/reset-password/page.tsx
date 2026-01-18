@@ -15,11 +15,8 @@ export default async function ResetPasswordPage({
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
 
-  // 인증되지 않은 사용자는 access_token이 필요
-  const accessToken =
-    user?.access_token ||
-    (typeof window !== 'undefined' &&
-      new URLSearchParams(window.location.search).get('access_token'))
+  // 비밀번호 재설정 링크를 통해 온 사용자인지 확인
+  // Supabase가 자동으로 세션을 처리하므로 별도의 access_token 처리가 필요 없음
 
   const errorMessages: Record<string, string> = {
     'Password is too short': '비밀번호는 최소 6자 이상이어야 합니다.',
