@@ -2,13 +2,29 @@ import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
 export async function middleware(request: NextRequest) {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+
+  // 환경 변수가 설정되지 않은 경우 (배포 환경 체크)
+  if (!supabaseUrl || !supabaseKey) {
+    console.error('Missing Supabase environment variables')
+    // 홈페이지와 공개 페이지는 미들웨어 없이 통과
+    const pathname = request.nextUrl.pathname
+    const publicPaths = ['/', '/login', '/register', '/forgot-password', '/reset-password']
+    const isPublicPath = publicPaths.some(path => pathname === path || pathname.startsWith(path))
+
+    if (isPublicPath || pathname.startsWith('/cities')) {
+      return NextResponse.next()
+    }
+  }
+
   let supabaseResponse = NextResponse.next({
     request,
   })
 
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
+    supabaseUrl!,
+    supabaseKey!,
     {
       cookies: {
         getAll() {
