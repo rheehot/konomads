@@ -1,10 +1,27 @@
+import { requestPasswordReset } from '../auth/forgot-password/actions'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import Link from 'next/link'
 
-export default function ForgotPasswordPage() {
+export default async function ForgotPasswordPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; success?: string }>
+}) {
+  const errorMessages: Record<string, string> = {
+    'Email not confirmed': '이메일 인증이 완료되지 않았습니다.',
+    'User not found': '해당 이메일로 가입된 계정을 찾을 수 없습니다.',
+  }
+
+  const { error, success } = await searchParams
+  const errorMessage = error
+    ? (errorMessages[error] || error)
+    : null
+
+  const successMessage = success || null
+
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4">
       <Card className="w-full max-w-md">
@@ -17,7 +34,17 @@ export default function ForgotPasswordPage() {
           </p>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4">
+          {errorMessage && (
+            <div className="mb-4 p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md">
+              {errorMessage}
+            </div>
+          )}
+          {successMessage && (
+            <div className="mb-4 p-3 text-sm text-green-600 bg-green-50 border border-green-200 rounded-md">
+              {successMessage}
+            </div>
+          )}
+          <form action={requestPasswordReset} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">이메일</Label>
               <Input

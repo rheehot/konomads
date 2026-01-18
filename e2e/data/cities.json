@@ -1,0 +1,131 @@
+{
+  "featuredCities": [
+    {
+      "id": "test-city-1",
+      "slug": "seoul",
+      "name": "서울",
+      "name_en": "Seoul",
+      "description": "South Korea's capital is a mix of modern skyscrapers and traditional temples. Excellent for tech nomads with fast internet and vibrant startup scene.",
+      "image_url": "https://images.unsplash.com/photo-1538485399081-7191377e8241?w=800",
+      "region": "East Asia",
+      "population": 9720000,
+      "wifi_rating": 5,
+      "cafe_rating": 5,
+      "cost_rating": 3,
+      "safety_rating": 5,
+      "community_rating": 4,
+      "overall_rating": 4.5,
+      "tags": ["tech", "startup", "food", "culture", "safety"],
+      "is_featured": true
+    },
+    {
+      "id": "test-city-2",
+      "slug": "bangkok",
+      "name": "Bangkok",
+      "name_en": "Bangkok",
+      "description": "Thailand's vibrant capital offers affordable living, amazing food, and a thriving digital nomad community. Great coworking spaces and networking events.",
+      "image_url": "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=800",
+      "region": "Southeast Asia",
+      "population": 10539000,
+      "wifi_rating": 4,
+      "cafe_rating": 5,
+      "cost_rating": 5,
+      "safety_rating": 4,
+      "community_rating": 5,
+      "overall_rating": 4.7,
+      "tags": ["affordable", "food", "community", "coworking"],
+      "is_featured": true
+    },
+    {
+      "id": "test-city-3",
+      "slug": "lisbon",
+      "name": "Lisboa",
+      "name_en": "Lisbon",
+      "description": "Portugal's coastal capital combines historic charm with modern amenities. Excellent weather, great food scene, and growing tech community.",
+      "image_url": "https://images.unsplash.com/photo-1548266652-99cf277df8c4?w=800",
+      "region": "Europe",
+      "population": 504718,
+      "wifi_rating": 4,
+      "cafe_rating": 4,
+      "cost_rating": 3,
+      "safety_rating": 5,
+      "community_rating": 5,
+      "overall_rating": 4.2,
+      "tags": ["europe", "weather", "startup", "safety"],
+      "is_featured": true
+    },
+    {
+      "id": "test-city-4",
+      "slug": "medellin",
+      "name": "Medellín",
+      "name_en": "Medellin",
+      "description": "Colombia's innovative city offers perfect spring weather year-round. Known for its digital nomad community and affordable lifestyle.",
+      "image_url": "https://images.unsplash.com/photo-1594176639658-64b51f7c6104?w=800",
+      "region": "South America",
+      "population": 2529000,
+      "wifi_rating": 4,
+      "cafe_rating": 4,
+      "cost_rating": 5,
+      "safety_rating": 3,
+      "community_rating": 5,
+      "overall_rating": 4.3,
+      "tags": ["affordable", "weather", "community", "transformation"],
+      "is_featured": true
+    }
+  ],
+  "regularCities": [
+    {
+      "id": "test-city-5",
+      "slug": "tokyo",
+      "name": "東京",
+      "name_en": "Tokyo",
+      "description": "Japan's bustling capital offers unique blend of tradition and cutting-edge technology. Efficient public transport and countless work-friendly cafes.",
+      "image_url": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
+      "region": "East Asia",
+      "population": 13960000,
+      "wifi_rating": 5,
+      "cafe_rating": 5,
+      "cost_rating": 2,
+      "safety_rating": 5,
+      "community_rating": 3,
+      "overall_rating": 4.0,
+      "tags": ["tech", "food", "culture", "safety", "expensive"],
+      "is_featured": false
+    },
+    {
+      "id": "test-city-6",
+      "slug": "bali-ubud",
+      "name": "Ubud",
+      "name_en": "Ubud, Bali",
+      "description": "Spiritual heart of Bali with thriving digital nomad scene. Surrounded by rice terraces and temples, perfect for work-life balance.",
+      "image_url": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800",
+      "region": "Southeast Asia",
+      "population": 30000,
+      "wifi_rating": 4,
+      "cafe_rating": 4,
+      "cost_rating": 5,
+      "safety_rating": 4,
+      "community_rating": 5,
+      "overall_rating": 4.4,
+      "tags": ["affordable", "wellness", "community", "nature"],
+      "is_featured": false
+    }
+  ],
+  "testCities": {
+    "primary": {
+      "id": "test-city-1",
+      "slug": "seoul",
+      "name": "서울"
+    },
+    "secondary": {
+      "id": "test-city-2",
+      "slug": "bangkok",
+      "name": "Bangkok"
+    },
+    "tertiary": {
+      "id": "test-city-3",
+      "slug": "lisbon",
+      "name": "Lisboa"
+    }
+  }
+}

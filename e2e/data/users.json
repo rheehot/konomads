@@ -1,0 +1,90 @@
+{
+  "validUsers": [
+    {
+      "id": "test-user-1",
+      "email": "testuser1@konomads.com",
+      "password": "Test123!@#",
+      "username": "testnomad1",
+      "full_name": "Test Nomad One",
+      "bio": "Digital nomad exploring the world",
+      "location": "Seoul, South Korea",
+      "website": "https://testnomad1.com"
+    },
+    {
+      "id": "test-user-2",
+      "email": "testuser2@konomads.com",
+      "password": "Test456!@#",
+      "username": "testnomad2",
+      "full_name": "Test Nomad Two",
+      "bio": "Remote worker and travel enthusiast",
+      "location": "Bangkok, Thailand",
+      "website": "https://testnomad2.blog"
+    },
+    {
+      "id": "test-user-3",
+      "email": "testuser3@konomads.com",
+      "password": "Test789!@#",
+      "username": "testnomad3",
+      "full_name": "Test Nomad Three",
+      "bio": "Software engineer living the nomad life",
+      "location": "Lisbon, Portugal",
+      "website": null
+    },
+    {
+      "id": "test-admin-1",
+      "email": "testadmin@konomads.com",
+      "password": "Admin123!@#",
+      "username": "testadmin",
+      "full_name": "Test Admin",
+      "bio": "Community administrator",
+      "location": "Singapore",
+      "website": "https://konomads.com"
+    }
+  ],
+  "invalidUsers": [
+    {
+      "email": "invalid@test.com",
+      "password": "WrongPassword123!",
+      "description": "Non-existent user"
+    },
+    {
+      "email": "testuser1@konomads.com",
+      "password": "WrongPassword123!",
+      "description": "Valid email, wrong password"
+    },
+    {
+      "email": "invalid-email-format",
+      "password": "Test123!@#",
+      "description": "Invalid email format"
+    },
+    {
+      "email": "testuser1@konomads.com",
+      "password": "123",
+      "description": "Password too short"
+    },
+    {
+      "email": "",
+      "password": "Test123!@#",
+      "description": "Empty email"
+    },
+    {
+      "email": "testuser1@konomads.com",
+      "password": "",
+      "description": "Empty password"
+    }
+  ],
+  "testCredentials": {
+    "primary": {
+      "email": "testuser1@konomads.com",
+      "password": "Test123!@#"
+    },
+    "secondary": {
+      "email": "testuser2@konomads.com",
+      "password": "Test456!@#"
+    },
+    "admin": {
+      "email": "testadmin@konomads.com",
+      "password": "Admin123!@#"
+    }
+  }
+}

@@ -10,7 +10,7 @@ import { createClient } from '@/lib/supabase/server'
 export default async function RegisterPage({
   searchParams,
 }: {
-  searchParams: { error?: string }
+  searchParams: Promise<{ error?: string }>
 }) {
   const supabase = await createClient()
   const { data: { user } } = await supabase.auth.getUser()
@@ -25,8 +25,9 @@ export default async function RegisterPage({
     'Password should be at least 6 characters': '비밀번호는 6자 이상이어야 합니다.',
   }
 
-  const errorMessage = searchParams.error
-    ? (errorMessages[searchParams.error] || searchParams.error)
+  const { error } = await searchParams
+  const errorMessage = error
+    ? (errorMessages[error] || error)
     : null
 
   return (

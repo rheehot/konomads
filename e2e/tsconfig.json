@@ -1,0 +1,79 @@
+{
+  "compilerOptions": {
+    /* ===========================
+       Basic Options
+       =========================== */
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "checkJs": false,
+
+    /* ===========================
+       Type Checking
+       =========================== */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* ===========================
+       Emit Options
+       =========================== */
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": true,
+    "removeComments": false,
+    "noEmit": true,
+
+    /* ===========================
+       Interop Constraints
+       =========================== */
+    "isolatedModules": true,
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": false,
+
+    /* ===========================
+       Path Mapping
+       =========================== */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["../*"],
+      "@/components/*": ["../components/*"],
+      "@/lib/*": ["../lib/*"],
+      "@/app/*": ["../app/*"],
+      "@/types/*": ["../types/*"],
+      "@/e2e/*": ["./"]
+    },
+
+    /* ===========================
+       Playwright Specific
+       =========================== */
+    "types": ["@playwright/test", "node"],
+
+    /* ===========================
+       Additional Options
+       =========================== */
+    "jsx": "react",
+    "incremental": true
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "../types/**/*.ts",
+    "../lib/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "test-results",
+    "playwright-report",
+    "../node_modules"
+  ]
+}

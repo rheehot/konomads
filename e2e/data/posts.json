@@ -1,0 +1,132 @@
+{
+  "categories": ["general", "question", "tips", "introduction", "event", "marketplace"],
+  "samplePosts": [
+    {
+      "id": "test-post-1",
+      "user_id": "test-user-1",
+      "city_id": "test-city-1",
+      "title": "Best coworking spaces in Seoul for developers",
+      "content": "I've been working remotely in Seoul for the past 6 months and wanted to share my favorite coworking spaces:\n\n1. **Spark Labs** - Great startup community in Gangnam\n2. **Maro29** - Beautiful cafe-style workspace in Itaewon\n3. **Fast Track** - 24/7 access in Hongdae\n\nEach has reliable high-speed internet and plenty of power outlets. Maro29 is my personal favorite for the atmosphere and coffee quality.\n\nPro tip: Most places offer day passes for around 20,000-30,000 KRW if you want to try before committing to a monthly plan.",
+      "category": "tips",
+      "tags": ["coworking", "seoul", "wifi", "startup"],
+      "views": 234,
+      "likes_count": 45,
+      "comments_count": 12,
+      "is_pinned": true,
+      "created_at": "2024-01-15T10:00:00.000Z",
+      "updated_at": "2024-01-15T10:00:00.000Z"
+    },
+    {
+      "id": "test-post-2",
+      "user_id": "test-user-2",
+      "city_id": "test-city-2",
+      "title": "Looking for language exchange partners in Bangkok",
+      "content": "Hey everyone! 👋\n\nI'm currently in Bangkok for the next 3 months and looking for language exchange partners. I can help you practice English or Korean in exchange for helping me with Thai.\n\nI'm interested in:\n- Weekly meetups at cafes\n- Exploring the city together\n- Learning about Thai culture\n\nIf you're interested, drop a comment or send me a message! Let's learn together.",
+      "category": "general",
+      "tags": ["language-exchange", "bangkok", "community", "thai"],
+      "views": 156,
+      "likes_count": 28,
+      "comments_count": 34,
+      "is_pinned": false,
+      "created_at": "2024-01-14T14:30:00.000Z",
+      "updated_at": "2024-01-14T14:30:00.000Z"
+    },
+    {
+      "id": "test-post-3",
+      "user_id": "test-user-3",
+      "city_id": "test-city-3",
+      "title": "Question: Best neighborhoods for digital nomads in Lisbon?",
+      "content": "Hi fellow nomads!\n\nI'm planning to move to Lisbon next month and wondering which neighborhoods would be best for someone working remotely. Looking for:\n\n- Good internet connection\n- Not too touristy\n- Affordable rent\n- Nice cafes for working\n- Community of other nomads\n\nI've heard good things about Príncipe Real and Arroios. Any recommendations or experiences to share?\n\nThanks in advance! 🇵🇹",
+      "category": "question",
+      "tags": ["lisbon", "neighborhoods", "accommodation", "advice"],
+      "views": 189,
+      "likes_count": 32,
+      "comments_count": 27,
+      "is_pinned": false,
+      "created_at": "2024-01-13T09:15:00.000Z",
+      "updated_at": "2024-01-13T09:15:00.000Z"
+    },
+    {
+      "id": "test-post-4",
+      "user_id": "test-user-1",
+      "city_id": null,
+      "title": "New here! Introduction 👋",
+      "content": "Hello Konomads community!\n\nI'm Alex, a software developer from Canada who's been living the nomad life for about a year now. So far I've worked from:\n\n- Chiang Mai, Thailand (3 months)\n- Da Nang, Vietnam (2 months)\n- Seoul, South Korea (4 months)\n\nPlanning to explore Europe next - currently deciding between Lisbon and Medellin.\n\nExcited to connect with other nomads here and share experiences! Feel free to reach out if you're in Seoul or planning to visit.",
+      "category": "introduction",
+      "tags": ["introduction", "community", "travel", "asia"],
+      "views": 312,
+      "likes_count": 67,
+      "comments_count": 41,
+      "is_pinned": false,
+      "created_at": "2024-01-12T16:45:00.000Z",
+      "updated_at": "2024-01-12T16:45:00.000Z"
+    },
+    {
+      "id": "test-post-5",
+      "user_id": "test-user-2",
+      "city_id": "test-city-2",
+      "title": "Weekend trip guide: Ayutthaya from Bangkok",
+      "content": "Just got back from an amazing weekend trip to Ayutthaya and wanted to share some tips for fellow nomads looking for a quick getaway from Bangkok!\n\n## Getting There\n- Take the train from Hua Lamphong Station (about 2 hours, 20 THB for 3rd class)\n- Minivan from Victory Monument (about 1.5 hours, 60 THB)\n\n## Must-See Temples\n1. Wat Mahathat (famous Buddha head in tree roots)\n2. Wat Chaiwatthanaram (stunning sunset views)\n3. Wat Phra Si Sanphet (largest temple)\n\n## Tips\n- Rent a bicycle for the day (50 THB)\n- Bring sun protection and water\n- Go early morning to avoid crowds\n- Stay for sunset at Chaiwatthanaram\n\nPerfect way to recharge after a week of work!",
+      "category": "tips",
+      "tags": ["travel", "bangkok", "thailand", "weekend-trip", "guide"],
+      "views": 278,
+      "likes_count": 53,
+      "comments_count": 18,
+      "is_pinned": false,
+      "created_at": "2024-01-11T11:20:00.000Z",
+      "updated_at": "2024-01-11T11:20:00.000Z"
+    },
+    {
+      "id": "test-post-6",
+      "user_id": "test-user-3",
+      "city_id": "test-city-1",
+      "title": "Selling portable WiFi device - Seoul",
+      "content": "Hey everyone,\n\nI'm leaving Seoul soon and selling my portable WiFi device. Great for nomads who need reliable internet on the go.\n\n## Details\n- Model: KT Egg 4G LTE\n- Unlimited data\n- Battery lasts 10+ hours\n- Can connect up to 5 devices\n\n## Price\n- 50,000 KRW (originally 80,000 KRW)\n- Bought 6 months ago, in excellent condition\n\nAvailable for pickup in Hongdae or Gangnam. DM if interested!\n\nFirst come, first served.",
+      "category": "marketplace",
+      "tags": ["marketplace", "seoul", "wifi", "selling"],
+      "views": 145,
+      "likes_count": 12,
+      "comments_count": 8,
+      "is_pinned": false,
+      "created_at": "2024-01-10T13:30:00.000Z",
+      "updated_at": "2024-01-10T13:30:00.000Z"
+    },
+    {
+      "id": "test-post-7",
+      "user_id": "test-admin-1",
+      "city_id": null,
+      "title": "📢 Konomads Community Guidelines Update",
+      "content": "Hello community!\n\nWe've updated our community guidelines to ensure Konomads remains a welcoming and helpful space for all digital nomads. Here are the key updates:\n\n## New Guidelines\n\n1. **Be Respectful** - Treat all community members with kindness and respect\n\n2. **Stay on Topic** - Posts should be relevant to digital nomad life, travel, and remote work\n\n3. **No Spam** - Self-promotion should be limited and genuinely helpful\n\n4. **Help Each Other** - Share knowledge, experiences, and resources freely\n\n5. **Follow Local Laws** - When discussing visas, work permits, etc., always follow local regulations\n\n## Reporting\nYou can report posts or comments that violate these guidelines. Our team will review all reports within 24 hours.\n\nThank you for being part of this amazing community! 🌍✨",
+      "category": "general",
+      "tags": ["announcement", "guidelines", "community"],
+      "views": 567,
+      "likes_count": 123,
+      "comments_count": 15,
+      "is_pinned": true,
+      "created_at": "2024-01-09T10:00:00.000Z",
+      "updated_at": "2024-01-09T10:00:00.000Z"
+    }
+  ],
+  "postTemplates": {
+    "question": {
+      "title": "Question about {topic} in {city}?",
+      "content": "Hi fellow nomads!\n\nI'm planning to visit {city} next month and had a question about {topic}. Has anyone experienced this before?\n\nAny advice would be greatly appreciated!",
+      "category": "question"
+    },
+    "tips": {
+      "title": "My top {number} tips for {topic} in {city}",
+      "content": "Based on my experience in {city}, here are my top {number} tips for {topic}:\n\n1. Tip one\n2. Tip two\n3. Tip three\n\nHope this helps others!",
+      "category": "tips"
+    },
+    "introduction": {
+      "title": "New here! Introduction from {location}",
+      "content": "Hello Konomads community!\n\nI'm {name} from {location}. I've been working remotely for {time} and excited to connect with other nomads here.\n\nLooking forward to learning from this community!",
+      "category": "introduction"
+    },
+    "marketplace": {
+      "title": "Selling {item} - {city}",
+      "content": "Hey everyone,\n\nI'm selling {item} in {city}.\n\n## Details\n- Condition: {condition}\n- Price: {price}\n- Location: {area}\n\nDM if interested!",
+      "category": "marketplace"
+    }
+  }
+}

@@ -12,8 +12,9 @@ interface CityPageProps {
   }
 }
 
-export default function CityPage({ params }: CityPageProps) {
-  const city = CITIES.find((c) => c.slug === params.slug)
+export default async function CityPage({ params }: CityPageProps) {
+  const { slug } = await params
+  const city = CITIES.find((c) => c.slug === slug)
 
   if (!city) {
     notFound()
